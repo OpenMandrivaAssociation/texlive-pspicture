@@ -51,6 +51,7 @@ pict2e.
 #- source
 %doc %{_texmfdistdir}/source/latex/pspicture/pspicture.dtx
 %doc %{_texmfdistdir}/source/latex/pspicture/pspicture.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,3 +62,5 @@ pict2e.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
