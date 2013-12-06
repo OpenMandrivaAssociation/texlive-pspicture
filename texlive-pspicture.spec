@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-pspicture
 Version:	20070311
-Release:	2
+Release:	3
 Summary:	PostScript picture support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pspicture
