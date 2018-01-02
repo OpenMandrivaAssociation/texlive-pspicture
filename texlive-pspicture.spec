@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/pspicture
-# catalog-date 2007-03-11 16:56:01 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-pspicture
 Version:	20170414
 Release:	1
@@ -34,13 +28,11 @@ pict2e.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/dvips/pspicture/pspicture.ps
-%{_texmfdistdir}/tex/latex/pspicture/pspicture.sty
-%doc %{_texmfdistdir}/doc/latex/pspicture/README
-%doc %{_texmfdistdir}/doc/latex/pspicture/pspicture.pdf
+%{_texmfdistdir}/dvips/pspicture
+%{_texmfdistdir}/tex/latex/pspicture
+%doc %{_texmfdistdir}/doc/latex/pspicture
 #- source
-%doc %{_texmfdistdir}/source/latex/pspicture/pspicture.dtx
-%doc %{_texmfdistdir}/source/latex/pspicture/pspicture.ins
+%doc %{_texmfdistdir}/source/latex/pspicture
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,17 +43,3 @@ pict2e.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070311-2
-+ Revision: 755152
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070311-1
-+ Revision: 719325
-- texlive-pspicture
-- texlive-pspicture
-- texlive-pspicture
-- texlive-pspicture
-
