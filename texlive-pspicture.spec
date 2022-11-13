@@ -1,13 +1,13 @@
 Name:		texlive-pspicture
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	PostScript picture support
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pspicture
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -19,12 +19,12 @@ A replacement for LaTeX's picture macros, that uses PostScript
 pict2e.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -36,7 +36,8 @@ pict2e.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
