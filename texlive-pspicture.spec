@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	PostScript picture support
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pspicture
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/pspicture
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pspicture.doc.r%{version}.tar.xz
